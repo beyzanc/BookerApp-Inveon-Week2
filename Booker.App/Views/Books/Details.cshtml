@@ -1,0 +1,56 @@
+﻿@model Booker.App.Models.Book
+
+@{
+    ViewData["Title"] = "Kitap Detayları";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Kitap Detayları</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <th>Kitap Adı</th>
+            <td>@Model.Title</td>
+        </tr>
+        <tr>
+            <th>Yazar</th>
+            <td>@Model.Author</td>
+        </tr>
+        <tr>
+            <th>Yayın Yılı</th>
+            <td>@Model.PublicationYear</td>
+        </tr>
+        <tr>
+            <th>ISBN</th>
+            <td>@Model.ISBN</td>
+        </tr>
+        <tr>
+            <th>Tür</th>
+            <td>@Model.Genre</td>
+        </tr>
+        <tr>
+            <th>Yayıncı</th>
+            <td>@Model.Publisher</td>
+        </tr>
+        <tr>
+            <th>Sayfa Sayısı</th>
+            <td>@Model.PageCount</td>
+        </tr>
+        <tr>
+            <th>Dil</th>
+            <td>@Model.Language</td>
+        </tr>
+        <tr>
+            <th>Özet</th>
+            <td>@Model.Summary</td>
+        </tr>
+        <tr>
+            <th>Mevcut Kopya Sayısı</th>
+            <td>@Model.AvailableCopies</td>
+        </tr>
+    </table>
+    <a href="/Books/Index" class="btn btn-secondary mt-3">Geri Dön</a>
+</div>

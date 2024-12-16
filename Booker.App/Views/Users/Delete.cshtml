@@ -1,0 +1,13 @@
+﻿@model Booker.App.Models.User
+
+<h1>Kullanıcı Sil</h1>
+
+<p>Bu kullanıcıyı silmek istediğinize emin misiniz?</p>
+<p><strong>Kullanıcı Adı:</strong> @Model.UserName</p>
+<p><strong>Email:</strong> @Model.Email</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>

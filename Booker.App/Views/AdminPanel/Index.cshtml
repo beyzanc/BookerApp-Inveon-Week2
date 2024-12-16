@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Admin Paneli";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Admin Paneline Hoş Geldiniz</h1><br />
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-3">Kullanıcı Yönetimi</h5>
+                    <p class="card-text">Kullanıcıları ekleyin, düzenleyin veya silin.</p>
+                    <a asp-controller="Users" asp-action="Index" class="btn btn-primary btn-block">
+                        Yönetim Sayfasına Git
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-3">Rol Yönetimi</h5>
+                    <p class="card-text">Rolleri görüntüleyin, ekleyin veya düzenleyin.</p>
+                    <a asp-controller="Roles" asp-action="Index" class="btn btn-success btn-block">
+                        Yönetim Sayfasına Git
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-3">Kitap Yönetimi</h5>
+                    <p class="card-text">Kitapları keşfedin.</p>
+                    <a asp-controller="Books" asp-action="Index" class="btn btn-info btn-block">
+                        Yönetim Sayfasına Git
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

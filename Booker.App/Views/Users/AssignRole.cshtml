@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
+
+<h1>Rol Ata</h1>
+
+<form asp-action="AssignRole" method="post">
+    <input type="hidden" name="id" value="@ViewBag.UserId" />
+    <div class="form-group">
+        <label for="roleName">Rol Seçin:</label>
+        <select id="roleName" name="roleName" class="form-control">
+            @foreach (var role in Model)
+            {
+                <option value="@role.Name">@role.Name</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Rol Ata</button>
+</form>
+<a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>

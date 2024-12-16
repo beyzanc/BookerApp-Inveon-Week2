@@ -1,0 +1,13 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+
+<h1>Rol Sil</h1>
+
+<p>Bu rolü silmek istediğinize emin misiniz?</p>
+<p><strong>Rol Adı:</strong> @Model.Name</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>
+

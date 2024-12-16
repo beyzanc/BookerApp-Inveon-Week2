@@ -1,0 +1,42 @@
+﻿@model Booker.App.Models.User
+
+@{
+    ViewData["Title"] = "Yeni Kullanıcı Ekle";
+}
+
+<h1>Yeni Kullanıcı Ekle</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="UserName">Kullanıcı Adı</label>
+        <input type="text" id="UserName" name="UserName" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="FullName">Ad Soyad</label>
+        <input type="text" id="FullName" name="FullName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Şifre</label>
+        <input type="password" id="Password" name="password" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="RoleName">Rol</label>
+        <select id="RoleName" name="roleName" class="form-control">
+            <option value="">Rol Seçiniz</option>
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Kaydet</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>

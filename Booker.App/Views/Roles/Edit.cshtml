@@ -1,0 +1,13 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+
+<h1>Rol Düzenle</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <label for="roleName">Rol Adı</label>
+        <input type="text" id="roleName" name="roleName" class="form-control" value="@Model.Name" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Güncelle</button>
+</form>
+<a asp-action="Index" class="btn btn-secondary mt-3">Geri Dön</a>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Rol Kaldır";
+    var userId = ViewBag.UserId;
+    var userName = ViewBag.UserName;
+}
+
+<div class="container mt-4">
+    <h2>Rol Kaldır</h2>
+    <p><strong>Kullanıcı:</strong> @userName</p>
+
+    @if (Model.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Mevcut Roller</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td>@role</td>
+                        <td>
+                            <form asp-action="RemoveRole" method="post">
+                                <input type="hidden" name="id" value="@userId" />
+                                <input type="hidden" name="roleName" value="@role" />
+                                <button type="submit" class="btn btn-danger btn-sm">Rolü Kaldır</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Kullanıcının herhangi bir rolü bulunmamaktadır.</p>
+    }
+
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</div>
